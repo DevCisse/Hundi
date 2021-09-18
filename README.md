@@ -1,2 +1,2 @@
 # JsSiteTemplate
-A template for JS coding challenges
+A JavaScript coding challenge that generates numbers from 0 to 100
