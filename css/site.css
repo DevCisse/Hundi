@@ -76,3 +76,13 @@ code[class*="language-"],
 word-break: break-all;
 word-wrap: break-word;
 }
+
+
+.even{
+    font-weight:bold ;
+    font-size: large;
+}
+
+.odd{
+    font-weight: 100;
+}

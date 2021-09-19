@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A coding Project by Hassan Salihu</title>
+    <title>Hundi: A coding Project by Hassan Salihu</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,7 +24,7 @@
     <!-- ===== start Nav Section =======  -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"> <img src="img/logo_small_icon_only.png" alt="hassan salihu logo" height="30" width="30" /> APP NAME</a>
+        <a class="navbar-brand" href="index.html"> <img src="img/logo_small_icon_only.png" alt="hassan salihu logo" height="30" width="30" /> Hundi</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -56,31 +56,104 @@
   <!-- ===== start Main Section =======  -->
   <main class="flex-shrink-0">
     <div class="container  py-5 px-4">
-        <h2 class="border-1 border-bottom border-dark mt-5">The Code for APP NAME</h2>
+        <h2 class="border-1 border-bottom border-dark mt-5">The Code for Hundi</h2>
 
         <div class="row row-cols-1 row-cols-lg-2">
             <div class="col-lg-8">
                 <pre class="line-numbers">
                     <code class="language-javascript">
 
-                        
-//call hello world
+                        document.getElementById("btnSubmit").addEventListener("click", getValues);
 
-function helloWorld()
-{
-    alert('hello world');
-}
+                        // //get the values from the page
+                        
+                        function getValues() {
+                            //get values from the page
+                        
+                            let startValue = document.querySelector("#startValue").value;
+                            let endValue = document.querySelector("#endValue").value;
+                        
+                        
+                            // we generate the values
+                        
+                            startValue = parseInt(startValue);
+                            endValue = parseInt(endValue);
+                        
+                        
+                            if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
+                               let  numbers = generateNumbers(startValue, endValue);
+                        
+                               displayNumbers(numbers);
+                            } else {
+                                alert("You must enter a integer");
+                            }
+                        
+                        }
+                        
+                        //generate the numbers from start to end
+                        function generateNumbers(startValue, endValue) {
+                            let numbers = [];
+                        
+                            for (let index = startValue; index <= endValue; index++) {
+                                numbers.push(index);
+                            }
+                        
+                            return numbers;
+                        }
+                        
+                        //display the numbers and mark even numbers bold
+                        
+                        function displayNumbers(numbers) {
+                            let templateRows = "";
+                        
+                            for (let index = 0; index < numbers.length; index++) {
+                                let number = numbers[index];
+                                let className = "";
+                        
+                        
+                        
+                                if(number % 2 == 0)
+                                {
+                                    className = "even"
+                                }
+                                else{
+                                    className = "bold";
+                                }
+                        
+                                //code does not display properly
+                        
+                                templateRows+= `<tr class='${className}'><td>${number}</td></tr>`;
+                        
+                                document.getElementById("results").innerHTML = templateRows;   
+                            }
+                        
+                            
+                        }
+                        
+                        
                     </code>
 
                 </pre>
 
             </div>
             <div class="col-lg-4">
-                <p>The Code is structed in on fuction</p>
-                <h5>Hello World</h5>
+                <p>The Code is structed in three functions</p>
+                <h5>getValues()</h5>
 
-                <p>Hello World is a function that displays an alert with a message of hello world</p>    
+                <p>This function gets input from the user and checks if it is valid by calling the <strong>parseInt()</strong>  method. If the input is valid, it proceeds by generating numbers entered by the user.</p>    
+
+                <h5 class="border-3 border-top mt-2 ">generateNumbers(startValue,endValue)</h5>
+
+                <p>This function accepts two arguments and returns an array. The first argument is the start value and second argument is the end value. It then generate numbers between  the two values using a for loop, adds them to the array and returns the array.  </p>
+
+                
+                <h5 class="border-3 border-top mt-2">displayNumbers(numbers)</h5>
+
+                <p>An input of type array is passed to this function, it checks if the element in the array is an odd or even number in a loop iteration. During each loop iteration, it sets an HTML row element to the body of the HTML table element in DOM. </p>
+
             </div>
+
+
         </div>
 
     </div>

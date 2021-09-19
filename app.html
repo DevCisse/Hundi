@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A coding Project by Hassan Salihu</title>
+    <title>Hundi: A coding Project by Hassan Salihu</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +22,7 @@
     <!-- ===== start Nav Section =======  -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"> <img src="img/logo_small_icon_only.png" alt="hassan salihu logo" height="30" width="30" /> APP NAME</a>
+        <a class="navbar-brand" href="index.html"> <img src="img/logo_small_icon_only.png" alt="hassan salihu logo" height="30" width="30" /> Hundi</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,7 +53,45 @@
 
   <!-- ===== start Main Section =======  -->
   <main class="flex-shrink-0">
-    <div class="container">
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col-lg-4 col border-end border-2">
+                <h1>HUNDI: A Coding Project</h1>
+                <h4 class="lead">
+                    Live life one loop at a time. A javascript coding exercise using loops. Write program that displays the numbers of 0 to 100  Display the even numbers in <strong>BOLD</strong>
+                </h4>
+                <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+
+                <p>Enter a starting value and a ending value. Press the button and the values will appear</p>
+
+            </div>
+            <div class="col-lg-8 col">
+                <div>
+                    <h5>Enter Values</h5>
+                    <form class="row gy-2 gx-3" action="">
+                        <div class=" col">
+                            <input type="number" id="startValue" class="form-control" placeholder="Start Value" value="0" aria-label="Start Value">
+                        </div>
+                        <div class="col">
+                            <input type="number" id="endValue" class="form-control" placeholder="End Value" value="100" aria-label="End Value">
+
+                        </div>
+                        <div class="col-12 d-flex justify-content-end">
+                            <button id="btnSubmit" class="btn btn-lg btn-dark" type="button"> Display the Hundi</button>
+                        </div>
+
+                    </form>
+                    <h2 class="border-bottom border-2  mt-5">Results</h2>
+                   <div class="table-responsive">
+                       <table class="table table-striped table-sm">
+                           <tbody id="results">
+
+                           </tbody>
+                       </table>
+                   </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </main>
@@ -72,7 +110,7 @@
                 <img src="img/logo_white_large.png"  alt="Hassan Salihu" height="35"/> 
             </div>
             <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
-                <div class="row">
+                <div class="row ">
                     <div class="col social"><a target="_blank" href="#"><i class="fab fa-linkedin fa-2x" ></i> </a> </div>
                     <div class="col social"><a target="_blank" href="#"><i class="fab fa-github fa-2x"></i> </a> </div>
                     <div class="col social"><a target="_blank" href="#"><i class="fab fa-twitter fa-2x"></i> </a> </div>>
@@ -94,14 +132,20 @@
 </script>
 
 
-<script src="js/site.js">
 
-</script>
 
+<script src="js/site.js"></script>
 <script>
 var year = new Date().getFullYear();
 document.querySelector('#year').innerHTML = year;
+
+
+
+
 </script>
+
+
+
 </body>
 
 </html>
